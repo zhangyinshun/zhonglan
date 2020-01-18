@@ -1,0 +1,123 @@
+.banner {
+	margin-top: 83px;
+	img {
+		max-width: 100%;
+	}
+}
+.urgent-cause {
+	.row {
+		padding: 50px 0;
+		.col-xs-4 {
+			img {
+				max-width: 100%;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+		.col-xs-8 {
+			h2 {
+				margin-top: 60px;
+				color: #0ba1e4;
+			}
+			p {
+				font-size: 20px;
+				font-weight: 300;
+				line-height: 1.5em;
+				color: #919191;
+			}
+			p:first-of-type {
+				display: inline-block;
+				width: 80px;
+				border-top: 2px solid #0ba1e4;
+			}
+		}
+	}
+	.even {
+		.col-xs-8 {
+			text-align: right;
+		}
+	}
+}
+.urgent-order {
+	.order-top {
+		padding: 25px 0;
+		background-color: #0ba1e4;
+		h3 {
+			margin: 0;
+			color: #fff;
+			text-align: center;
+		}
+	}
+	.order-body {
+		background: url(../images/urgent_chat.jpg) no-repeat center top;
+		padding: 40px 15px;
+		h1 {
+			margin: 10px 0;
+		}
+		p {
+			font-size: 20px;
+			font-weight: 300;
+			line-height: 1.5em;
+			color: #919191;
+		}
+		p:first-of-type {
+			display: inline-block;
+			width: 80px;
+			border-top: 2px solid #0ba1e4;
+		}
+		ol {
+			margin: 20px 0;
+			li {
+				font-size: 18px;
+				line-height: 2em;
+			}
+		}
+	}
+}
+
+
+@media screen and(max-width:768px) {
+	.banner {
+		margin-top: 0;
+	}
+	.urgent-cause {
+		.row {
+			padding: 20px 0;
+			.col-xs-4 {
+				img {
+					max-width: 100%;
+					margin: 0 auto;
+					display: block;
+				}
+			}
+			.col-xs-8 {
+				h2 {
+					margin-top: 0;
+					font-size: 16px;
+				}
+				p {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	.urgent-order {
+		.order-top {
+			h3 {
+				font-size: 12px;
+			}
+		}
+		.order-body {
+			background-position: -600px -80px;
+			p {
+				font-size: 12px;
+			}
+			ol {
+				li {
+					font-size: 12px;
+					line-height: 2em;
+				}
+			}
+		}
+	}
+}

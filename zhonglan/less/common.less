@@ -1,0 +1,483 @@
+@blue: #0ba1e4;
+.transition(@time) {
+	transition: all @time ease-in-out;
+}
+.navbar {
+	padding: 15px 0;
+	border: 0;
+	margin-bottom: 0;
+	border-bottom: 2px solid @blue;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	background-color: rgba(255, 255, 255, 0.9);
+	.navbar-nav {
+		li {
+			a {
+				font-size: 16px;
+				padding: 16px 25px 5px;
+			}
+		}
+		.active {
+			a {
+				background-color: transparent;
+				color: @blue!important;
+				&:hover {
+					background-color: transparent;
+				}
+			}
+			p {
+				border-top: 1px solid @blue;
+				width: 18px;
+				margin: auto;
+			}
+		}
+		li:hover {
+			a {
+				background-color: transparent;
+				color: @blue!important;
+			}
+		}
+	}
+}
+/* 咨询区域 */
+.contact-banner {
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+	background: linear-gradient(to bottom, #0076d1, #5db8ff);
+	.waves {
+		position: absolute;
+		height: 100%;
+	}
+	.contact-banner-box {
+		margin-top: 30px;
+		margin-bottom: 40px;
+		text-align: center;
+		h2 {
+			display: block;
+			max-width: 10em;
+			margin: 0px auto;
+			line-height: 2em;
+			border-bottom: 2px solid #fff;
+			color: #f5f5f5;
+		}
+		h4 {
+			color: #f1f1f1;
+		}
+		.btn {
+			font-size: 24px;
+			padding-left: 30px;
+			padding-right: 30px;
+			margin-top: 20px;
+			color: #fff;
+			border: 1px solid #fff;
+			.transition(0.2s);
+			&:hover {
+				background-color: #fff;
+				color: @blue;
+				.transition(0.2s);
+			}
+		}
+	}
+}
+// 底部链接 联系方式
+.footer {
+	background-color: #363636;
+	.row {
+		> div {
+			height: 160px;
+			margin-top: 40px;
+			margin-bottom: 40px;
+			padding-left: 1em;
+			border-left: 2px solid #c1c1c1;
+			overflow: hidden;
+			color: #f5f5f5;
+			ul {
+				margin-top: 25px;
+				li {
+					height: 35px;
+					line-height: 35px;
+					a {
+						color: #f5f5f5;
+					}
+				}
+			}
+			.weixin {
+				width: 131px;
+			}
+			p {
+				line-height: 2.5em;
+			}
+			h2 {
+				margin: 0;
+				padding-left: 10px;
+				line-height: 52px;
+				color: #fff;
+				img {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+	}
+}
+// 版权信息
+.copyright {
+	height: auto;
+	background-color: #666;
+	color: #fafafa;
+	.container {
+		> p {
+			margin: 10px 0;
+			line-height: 40px;
+		}
+		a {
+			color: #fafafa;
+			display: inline-block;
+			margin-bottom: 20px;
+			&:hover {
+				text-decoration: none;
+			}
+			img {
+				margin-right: 5px;
+				float: left;
+			}
+			p {
+				margin: 0;
+				line-height: 20px;
+				float: left;
+			}
+		}
+	}
+}
+// 悬浮框
+.suspend-right {
+	z-index: 100;
+	position: fixed;
+	bottom: 30%;
+	right: 0.1%;
+	z-index: 1000;
+	width: 48px;
+	ul {
+		li {
+			position: relative;
+			margin-top: 2px;
+			a {
+				display: block;
+				overflow: hidden;
+				width: 48px;
+				height: 48px;
+				border: 1px solid @blue;
+				background-color: #f5f5f5;
+				background-image: url(../images/clan-slider.png);
+				background-repeat: no-repeat;
+				&:hover {
+					background-color: @blue;
+					~ div {
+						display: block;
+					}
+					~ img {
+						display: block;
+					}
+				}
+			}
+			div {
+				position: absolute;
+				top: 0px;
+				right: 48px;
+				display: none;
+				height: 48px;
+				padding-left: 10px;
+				padding-right: 2px;
+				white-space: nowrap;
+				border: 1px solid @blue;
+				background-color: @blue;
+				text-align: center;
+				line-height: 48px;
+				font-size: 18px;
+				color: #fff;
+			}
+			img {
+				width: 196px;
+				height: 196px;
+				position: absolute;
+				border: 1px solid @blue;
+				bottom: 0;
+				right: 50px;
+				display: none;
+			}
+		}
+		li:nth-child(1) {
+			a {
+				background-position: -1px -92px;
+				&:hover {
+					background-position: -47px -92px;
+				}
+			}
+		}
+		li:nth-child(2) {
+			a {
+				background-position: 0px -138px;
+				&:hover {
+					background-position: -46px -138px;
+				}
+			}
+		}
+		li:nth-child(3) {
+			a {
+				background-position: 0px -182px;
+				&:hover {
+					background-position: -46px -182px;
+				}
+			}
+		}
+		li:nth-child(4) {
+			a {
+				background-position: 0px -230px;
+				&:hover {
+					background-position: -46px -230px;
+				}
+			}
+		}
+		li:nth-child(5) {
+			a {
+				background-position: 0px 0;
+				&:hover {
+					background-position: -46px 0;
+				}
+			}
+		}
+	}
+}
+.suspend-left {
+	z-index: 100;
+	position: fixed;
+	left: 1px;
+	bottom: 1px;
+	width: 240px;
+	.header {
+		height: 35px;
+		background-color: @blue;
+		border-radius: 5px 5px 0 0;
+		span {
+			float: left;
+			font-size: 14px;
+			color: #fff;
+			margin-left: 12px;
+			line-height: 35px;
+		}
+		img {
+			float: right;
+			margin-top: 2px;
+			cursor: pointer;
+		}
+	}
+	.body {
+		border-radius: 0 0 5px 5px;
+		background-color: #ededed;
+		.title {
+			padding: 12px 0;
+			margin-bottom: 12px;
+			border-bottom: 1px solid #d5d5d5;
+			p {
+				margin: 0;
+				padding-left: 9px;
+			}
+			p:first-child {
+				font-size: 14px;
+				color: #666;
+			}
+			p:last-child {
+				color: #999;
+			}
+		}
+		.input {
+			padding: 0 9px;
+			textarea {
+				width: 222px;
+				height: 79px;
+				padding: 0 4px;
+				resize: none;
+				overflow: hidden;
+				border: 1px solid #d5d5d5;
+				background-color: #fff;
+				text-align: left;
+				font-size: 12px;
+			}
+			div {
+				margin-top: 7px;
+				height: 32px;
+				width: 222px;
+				line-height: 30px;
+				border: 1px solid #d5d5d5;
+				position: relative;
+				background-color: #fff;
+				i {
+					width: 35px;
+					height: 30px;
+					display: inline-block;
+					border-right: 1px solid #fff;
+					background-position: 9px center;
+					background-repeat: no-repeat;
+					vertical-align: top;
+				}
+				input {
+					vertical-align: top;
+					width: 140px;
+					height: 30px;
+					line-height: 30px;
+					border: none;
+					font-size: 12px;
+				}
+			}
+			div:nth-of-type(1) i {
+				background-image: url(../images/user.png);
+			}
+			div:nth-of-type(2) i {
+				background-image: url(../images/nodephone.png);
+			}
+			div:nth-of-type(3) i {
+				background-image: url(../images/nodemail.png);
+			}
+			div:nth-of-type(4) i {
+				background-image: url(../images/nodelocation.png);
+			}
+			button {
+				margin: 12px 0 18px;
+				height: 35px;
+				width: 90px;
+				line-height: 35px;
+				text-align: center;
+				border: 0;
+				border-radius: 2px;
+				font-size: 14px;
+				color: #fff;
+				cursor: pointer;
+				background-color: #00aef3;
+			}
+		}
+	}
+}
+// 手机端底部
+.mob-bottom {
+	display: none;
+	width: 100%;
+	text-align: center;
+	z-index: 999;
+	background-color: rgba(255, 255, 255, 0.9);
+	position: fixed;
+	bottom: 0;
+	border-top: 2px solid #0ba1e4;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	.row {
+		a {
+			display: block;
+			padding-top: 5px;
+			padding-bottom: 2px;
+			color: #616161;
+			line-height: 1.5em;
+			font-size: 12px;
+			img {
+				width: 28px;
+				display: block;
+				margin: auto;
+			}
+		}
+	}
+}
+.mob-btn {
+	display: none;
+	position: fixed;
+	right: 0;
+	bottom: 55px;
+	z-index: 999;
+	width: 50px;
+}
+.mob-goTop,
+.mob-side {
+	// display: none;
+	margin-top: 2px;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background: rgba(255,255,255,0.9) url(../images/clan-slider.png) no-repeat -91px 1px;
+}
+.mob-side {
+	display: none;
+	background-position: 1px -45px;
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+		.navbar-nav {
+			li:last-child {
+				display: none;
+			}
+		}
+	}
+	.footer .row div .weixin {
+		width: 94px;
+	}
+	.footer .row div h2 {
+		font-size: 22px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+		.navbar-nav {
+			li:last-child {
+				display: block;
+			}
+		}
+	}
+	.footer .row{
+		> div{
+			p {
+				text-align: center;
+			}
+			.weixin {
+				width: 131px;
+			}
+			h2 {
+				font-size: 30px;
+			}
+		}
+		> div:last-child {
+			border-right: 2px solid #c1c1c1;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.container {
+		width: 100%;
+		padding: 0 15px;
+	}
+	.navbar {
+		padding: 0;
+		.navbar-header {
+			margin-left: 0 !important;
+		}
+		.navbar-nav {
+			.active {
+				p {
+					border: 0;
+				}
+			}
+		}
+	}
+	.suspend-right,
+	.suspend-left {
+		display: none;
+	}
+	.onfixed {
+		position: static;
+	}
+	.mob-bottom {
+		display: block;
+	}
+	.mob-btn {
+		display: block;
+	}
+}
